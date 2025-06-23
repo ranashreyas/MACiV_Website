@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/MACiV_Website/static/css/main.e6c13ad2.css",
-    "main.js": "/MACiV_Website/static/js/main.5ceec201.js",
+    "main.js": "/MACiV_Website/static/js/main.15723ea4.js",
     "static/js/453.29705f6c.chunk.js": "/MACiV_Website/static/js/453.29705f6c.chunk.js",
+    "static/media/blank_profile.png": "/MACiV_Website/static/media/blank_profile.06b11aa14136129fb0a4.png",
     "index.html": "/MACiV_Website/index.html",
     "main.e6c13ad2.css.map": "/MACiV_Website/static/css/main.e6c13ad2.css.map",
-    "main.5ceec201.js.map": "/MACiV_Website/static/js/main.5ceec201.js.map",
+    "main.15723ea4.js.map": "/MACiV_Website/static/js/main.15723ea4.js.map",
     "453.29705f6c.chunk.js.map": "/MACiV_Website/static/js/453.29705f6c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5ceec201.js"
+    "static/js/main.15723ea4.js"
   ]
 }
