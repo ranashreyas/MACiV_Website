@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MACiV_Website/static/css/main.e6c13ad2.css",
+    "main.js": "/MACiV_Website/static/js/main.45199575.js",
+    "static/js/453.29705f6c.chunk.js": "/MACiV_Website/static/js/453.29705f6c.chunk.js",
+    "index.html": "/MACiV_Website/index.html",
+    "main.e6c13ad2.css.map": "/MACiV_Website/static/css/main.e6c13ad2.css.map",
+    "main.45199575.js.map": "/MACiV_Website/static/js/main.45199575.js.map",
+    "453.29705f6c.chunk.js.map": "/MACiV_Website/static/js/453.29705f6c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.45199575.js"
+  ]
+}
