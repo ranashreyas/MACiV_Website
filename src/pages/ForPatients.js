@@ -1,4 +1,4 @@
-export default function Page1() {
+export default function ForPatients() {
   return (
     <div style={{ padding: '20px', textAlign: 'center' }}>
       <h1>Page 1</h1>
