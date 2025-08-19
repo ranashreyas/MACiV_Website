@@ -83,7 +83,7 @@ export default function Home() {
           maxWidth: '1200px',
           margin: '0 auto',
           backgroundColor: '#f2f4f7',
-          borderRadius: '9999px',
+          borderRadius: '24px',
           boxShadow: '0 8px 18px rgba(0,0,0,0.15)',
           overflow: 'hidden'
         }}>
