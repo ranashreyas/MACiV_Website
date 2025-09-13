@@ -8,6 +8,17 @@ export default function Home() {
     }
   };
 
+  // Image loader for team headshots with fallback
+  const headshotsContext = require.context('../assets', false, /\.(png|jpe?g|svg)$/);
+  const getHeadshotSrc = (pathLike) => {
+    try {
+      const cleaned = './' + String(pathLike || 'blank_profile.png').replace('../assets/', '');
+      return headshotsContext(cleaned);
+    } catch (e) {
+      return headshotsContext('./blank_profile.png');
+    }
+  };
+
   return (
     <div>
       {/* Hero/Header Section with Background */}
@@ -288,33 +299,36 @@ export default function Home() {
               gap: '24px'
             }}>
               {[
-                { name: 'Dr. Supriya Jain', title: 'Principal Investigator' },
-                { name: 'Dr. Lars Grosse-Wortmann', title: 'Co-Principal Investigator' },
-                { name: 'John Doe', title: 'temp title' },
-                { name: 'Jane Doe', title: 'temp title' },
-                { name: 'John Doe', title: 'temp title' },
-                { name: 'Jane Doe', title: 'temp title' }
-              ].map((m, i) => (
-                <div key={i} style={{
-                  background: '#ffffff',
-                  border: '1px solid #067e8c',
-                  borderRadius: '24px',
-                  padding: '18px 20px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  textAlign: 'center',
-                  gap: '10px'
-                }}>
-                  <img
-                    src={require('../assets/blank_profile.png')}
-                    alt={m.name}
-                    style={{ width: '96px', height: '96px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #e9ecef' }}
-                  />
-                  <div style={{ fontWeight: 700, color: '#2c3e6a', fontSize: '18px' }}>{m.name}</div>
-                  <div style={{ color: '#576574', fontSize: '14px', fontWeight: 600 }}>{m.title}</div>
-                </div>
-              ))}
+                { name: 'Dr. Supriya Jain, MD', title: 'Lead Investigator', headshot: '../assets/SupriyaJain.png'},
+                { name: 'Dr. Lars Grosse-Wortmann, MD', title: 'Lead Investigator', headshot: '../assets/LarsGrosseWortmann.png'},
+                { name: 'Dr. Victoria Maksymiuk, MD, MS', title: 'Study Coordinator', headshot: '../assets/VictoriaMaksymiuk.jpg'},
+                { name: 'Joshua Garelick', title: 'Study Administrator', headshot: '../assets/JoshuaGarelick.jpg'},
+                { name: 'Joel Johnson', title: 'Data Manager', headshot: '../assets/blank_profile.png'},
+                { name: 'Shreyas Rana', title: 'Website Developer', headshot: '../assets/ShreyasRana.jpg'}
+              ].map((m, i) => {
+                const src = getHeadshotSrc(m.headshot);
+                return (
+                  <div key={i} style={{
+                    background: '#ffffff',
+                    border: '1px solid #067e8c',
+                    borderRadius: '24px',
+                    padding: '18px 20px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    gap: '10px'
+                  }}>
+                    <img
+                      src={src}
+                      alt={m.name}
+                      style={{ width: '96px', height: '96px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #e9ecef' }}
+                    />
+                    <div style={{ fontWeight: 700, color: '#2c3e6a', fontSize: '18px' }}>{m.name}</div>
+                    <div style={{ color: '#576574', fontSize: '14px', fontWeight: 600 }}>{m.title}</div>
+                  </div>
+                );
+              })}
             </div>
           </section>
         </div>
@@ -354,8 +368,38 @@ export default function Home() {
                 </p>
               </div>
 
+              <div style={{ borderLeft: '6px solid #067e8c', paddingLeft: '16px', marginTop: '16px' }}>
+                <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '16px', fontWeight: 600}}>
+                  Banka P, Robinson JD, Uppu SC, Harris MA, Hasbani K, Lai WW, Richmond ME, Fratz S, Jain S, Johnson TR, Maskatia SA, Lu JC, Samyn MM, Patton D, Powell AJ. Cardiovascular magnetic resonance techniques and findings in children with myocarditis: a multicenter retrospective study. J Cardiovasc Magn Reson. 2015 Nov 17;17:96. doi: 10.1186/s12968-015-0201-6. PMID: 26576638; PMCID: PMC4650339.
+                </p>
+              </div>
+
+              <div style={{ borderLeft: '6px solid #067e8c', paddingLeft: '16px', marginTop: '16px' }}>
+                <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '16px', fontWeight: 600}}>
+                  Jain SS, Steele JM, Fonseca B, Huang S, Shah S, Maskatia SA, Buddhe S, Misra N, Ramachandran P, Gaur L, Eshtehardi P, Anwar S, Kaushik N, Han F, Chaudhuri NR, Grosse-Wortmann L. COVID-19 Vaccination-Associated Myocarditis in Adolescents. Pediatrics. 2021 Nov;148(5):e2021053427. doi: 10.1542/peds.2021-053427. Epub 2021 Aug 13. PMID: 34389692.
+                </p>
+              </div>
+
+              <div style={{ borderLeft: '6px solid #067e8c', paddingLeft: '16px', marginTop: '16px' }}>
+                <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '16px', fontWeight: 600}}>
+                  Truong DT, Dionne A, Muniz JC, McHugh KE, Portman MA, Lambert LM, Thacker D, Elias MD, Li JS, Toro-Salazar OH, Anderson BR, Atz AM, Bohun CM, Campbell MJ, Chrisant M, D'Addese L, Dummer KB, Forsha D, Frank LH, Frosch OH, Gelehrter SK, Giglia TM, Hebson C, Jain SS, Johnston P, Krishnan A, Lombardi KC, McCrindle BW, Mitchell EC, Miyata K, Mizzi T, Parker RM, Patel JK, Ronai C, Sabati AA, Schauer J, Sexson Tejtel SK, Shea JR, Shekerdemian LS, Srivastava S, Votava-Smith JK, White S, Newburger JW. Clinically Suspected Myocarditis Temporally Related to COVID-19 Vaccination in Adolescents and Young Adults: Suspected Myocarditis After COVID-19 Vaccination. Circulation. 2022 Feb;145(5):345-356. doi: 10.1161/CIRCULATIONAHA.121.056583. Epub 2021 Dec 6. PMID: 34865500.
+                </p>
+              </div>
+
+              <div style={{ borderLeft: '6px solid #067e8c', paddingLeft: '16px', marginTop: '16px' }}>
+                <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '16px', fontWeight: 600}}>
+                  Aeschlimann FA, Misra N, Hussein T, Panaioli E, Soslow JH, Crum K, Steele JM, Huber S, Marcora S, Brambilla P, Jain S, Navallas M, Giuli V, Rücker B, Angst F, Patel MD, Azarine A, Caro-Domínguez P, Cavaliere A, Di Salvo G, Ferroni F, Agnoletti G, Bonnemains L, Martins D, Boddaert N, Wong J, Pushparajah K, Raimondi F. Myocardial involvement in children with post-COVID multisystem inflammatory syndrome: a cardiovascular magnetic resonance based multicenter international study-the CARDOVID registry. J Cardiovasc Magn Reson. 2021 Dec 30;23(1):140. doi: 10.1186/s12968-021-00841-1. PMID: 34969397; PMCID: PMC8717054.
+                </p>
+              </div>
+
+              <div style={{ borderLeft: '6px solid #067e8c', paddingLeft: '16px', marginTop: '16px' }}>
+                <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '16px', fontWeight: 600}}>
+                  Lin J, Harahsheh AS, Raghuveer G, Jain S, Choueiter NF, Garrido-Garcia LM, Dahdah N, Portman MA, Misra N, Khoury M, Fabi M, Elias MD, Dionne A, Lee S, Tierney ESS, Ballweg JA, Manlhiot C, McCrindle BW. Emerging Insights Into the Pathophysiology of Multisystem Inflammatory Syndrome Associated With COVID-19 in Children. Can J Cardiol. 2023 Jun;39(6):793-802. doi: 10.1016/j.cjca.2023.01.002. Epub 2023 Jan 7. PMID: 36626979; PMCID: PMC9824951.
+                </p>
+              </div>
+
               {/* Actions */}
-              <div style={{ marginTop: '14px' }}>
+              {/* <div style={{ marginTop: '14px' }}>
                 <a href="https://pubmed.ncbi.nlm.nih.gov/39290640/" target="_blank" rel="noreferrer" style={{
                   display: 'inline-block',
                   backgroundColor: '#067e8c',
@@ -368,7 +412,7 @@ export default function Home() {
                 }}>
                   View on PubMed
                 </a>
-              </div>
+              </div> */}
             </div>
           </section>
         </div>
