@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MACiV_Website/static/css/main.3c40097a.css",
-    "main.js": "/MACiV_Website/static/js/main.5b0b129f.js",
+    "main.js": "/MACiV_Website/static/js/main.924349a8.js",
     "static/js/453.29705f6c.chunk.js": "/MACiV_Website/static/js/453.29705f6c.chunk.js",
     "static/media/whatIsThisStudyDoing.png": "/MACiV_Website/static/media/whatIsThisStudyDoing.d5ba272f7c4d0f307f3a.png",
     "static/media/whyParticipate.png": "/MACiV_Website/static/media/whyParticipate.7b321f12c764d2bde042.png",
@@ -9,18 +9,21 @@
     "static/media/whatIsThisStudyAbout.png": "/MACiV_Website/static/media/whatIsThisStudyAbout.c022171ac4e13f47d85b.png",
     "static/media/myocarditis.png": "/MACiV_Website/static/media/myocarditis.1973e7162dd61a139ab2.png",
     "static/media/informedConsent.png": "/MACiV_Website/static/media/informedConsent.405c79ec49baeca29105.png",
+    "static/media/heroTitleImage.png": "/MACiV_Website/static/media/heroTitleImage.6a36d72364d7b8744a9f.png",
     "static/media/StudyOverviewFig1.png": "/MACiV_Website/static/media/StudyOverviewFig1.769a4d85c9266ca4e6ae.png",
     "static/media/SupriyaJain.png": "/MACiV_Website/static/media/SupriyaJain.3283821e91e89fa91d7e.png",
     "static/media/LarsGrosseWortmann.png": "/MACiV_Website/static/media/LarsGrosseWortmann.cadc2d7054322440b2f0.png",
-    "static/media/VictoriaMaksymiuk.jpg": "/MACiV_Website/static/media/VictoriaMaksymiuk.4c641eaecb599fe02c8a.jpg",
+    "static/media/MatthewCornicelli.png": "/MACiV_Website/static/media/MatthewCornicelli.094829e3fe62b77b4858.png",
+    "static/media/myocarditisDiagram.png": "/MACiV_Website/static/media/myocarditisDiagram.d88c735753a12cc7193b.png",
+    "static/media/VictoriaMaksymiuk.jpg": "/MACiV_Website/static/media/VictoriaMaksymiuk.a6522e12ef6ca6f91927.jpg",
     "static/media/blank_profile.png": "/MACiV_Website/static/media/blank_profile.06b11aa14136129fb0a4.png",
     "index.html": "/MACiV_Website/index.html",
     "main.3c40097a.css.map": "/MACiV_Website/static/css/main.3c40097a.css.map",
-    "main.5b0b129f.js.map": "/MACiV_Website/static/js/main.5b0b129f.js.map",
+    "main.924349a8.js.map": "/MACiV_Website/static/js/main.924349a8.js.map",
     "453.29705f6c.chunk.js.map": "/MACiV_Website/static/js/453.29705f6c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c40097a.css",
-    "static/js/main.5b0b129f.js"
+    "static/js/main.924349a8.js"
   ]
 }
