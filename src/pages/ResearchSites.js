@@ -12,7 +12,7 @@ export default function ResearchSites() {
   const [selectedState, setSelectedState] = useState('ALL');
 
   // Asset resolver so you can edit string filenames per entry
-  const assetsCtx = require.context('../assets', false, /\.(png|jpe?g|svg)$/);
+  const assetsCtx = require.context('../assets/sites', false, /\.(png|jpe?g|svg)$/);
   const getAsset = (relativeName) => {
     try {
       const cleaned = './' + String(relativeName || 'blank_profile.png').replace('../assets/', '');
@@ -24,15 +24,43 @@ export default function ResearchSites() {
 
   const sites = useMemo(
     () => [
-      { state: 'Alabama',      name: 'University of Alabama',                                            pi: 'Camden Hebson, MD',          logo: 'ChildrensHospitalOfChicago.jpg',                 headshot: 'blank_profile.png' },
-      { state: 'Arizona',      name: "Phoenix Children's Hospital",                                     pi: 'John Smith, MD',             logo: 'ChildrensHospitalOfChicago.jpg',                 headshot: 'blank_profile.png' },
-      { state: 'California',   name: 'UCSF Benioff Children’s Hospital',                                 pi: 'Sarah Lee, MD',              logo: 'ChildrensHospitalOfChicago.jpg',                 headshot: 'blank_profile.png' },
-      { state: 'Massachusetts',name: 'Boston Children’s Hospital',                                       pi: 'Andrew Powell, MD',          logo: 'ChildrensHospitalOfChicago.jpg',                 headshot: 'blank_profile.png' },
-      { state: 'New York',     name: 'NewYork-Presbyterian Morgan Stanley Children’s Hospital',          pi: 'Jane Miller, MD',            logo: 'ChildrensHospitalOfChicago.jpg',                 headshot: 'blank_profile.png' },
-      { state: 'Texas',        name: 'Texas Children’s Hospital',                                        pi: 'Saul Flores, MD',            logo: 'ChildrensHospitalOfChicago.jpg',                 headshot: 'blank_profile.png' },
-      { state: 'Washington',   name: 'Seattle Children’s Hospital',                                      pi: 'Michael Chen, MD',           logo: 'ChildrensHospitalOfChicago.jpg',                 headshot: 'blank_profile.png' },
-      // Example with a wide logo asset already in repo:
-      // { state: 'Illinois', name: "Ann & Robert H. Lurie Children’s Hospital of Chicago", pi: 'Sample PI, MD', logo: 'ChildrensHospitalOfChicago.jpg', headshot: 'blank_profile.png' },
+      { state: 'Illinois',               name: 'Ann & Robert H. Lurie Children’s Hospital of Chicago',            pi: 'Matthew Cornicelli, MD',              logo: 'image52.jpg', headshot: 'image54.png' },
+      { state: 'New Jersey',             name: "Goryeb Children's Hospital",                                      pi: 'Saira Siddiqui, MD',                  logo: 'image53.png', headshot: 'image56.png' },
+      { state: 'Michigan',               name: "Betz Congenital Heart Center, Helen DeVos Children's Hospital",   pi: 'Stanley Sedore, MD, PhD',             logo: 'image55.png', headshot: 'image60.png' },
+      { state: 'Massachusetts',          name: 'Boston Children’s Hospital',                                      pi: 'Rebecca Beroukhim, MD',               logo: 'image59.png', headshot: 'image64.png' },
+      { state: 'Ohio',                   name: "Cleveland Clinic Children's",                                     pi: 'Rukmini Komarlu, MD',                 logo: 'image63.jpg', headshot: 'image69.png' },
+      { state: 'Colorado',               name: "Children's Hospital of Colorado",                                 pi: 'Brian Fonseca, MD',                   logo: 'image65.jpg', headshot: 'image67.png' },
+      { state: 'California',             name: "Children's Hospital, LA (CHLA)",                                  pi: 'Jennifer Su, MD',                     logo: 'image70.png', headshot: 'image72.png' },
+      { state: 'Pennsylvania',           name: "Children's Hospital of Philadelphia",                              pi: 'Danish Vaiyani, MD',                  logo: 'image74.png', headshot: 'image76.png' },
+      { state: 'Missouri',               name: 'Children’s Mercy Kansas City',                                    pi: 'Chris Mathis, MD',                    logo: 'image78.png', headshot: 'image79.jpg' },
+      { state: 'District of Columbia',   name: 'Children’s National Hospital and the George Washington University Hospital', pi: 'Ashraf Harahsheh, MD',   logo: 'image80.png', headshot: 'image81.png' },
+      { state: 'New York',               name: "Cohen Children's Northwell Health Physician Partners",            pi: 'Nilanjana Misra, MD',                 logo: 'image36.png', headshot: 'image38.png' },
+      { state: 'New York',               name: 'Columbia University Children’s Hospital',                         pi: 'Michael DiLorenzo, MD',               logo: 'image40.png', headshot: 'image42.jpg' },
+      { state: 'North Carolina',         name: "Duke Children's Hospital",                                        pi: 'Michael Campbell, MD',                logo: 'image44.png', headshot: 'image46.png' },
+      { state: 'Georgia',                name: 'Emory University School of Medicine, Sibley Heart Center Cardiology', pi: 'Hunter Wilson, MD',              logo: 'image48.png', headshot: 'image49.png' },
+      { state: 'Iowa',                   name: "University of Iowa Stead Family Children's Hospital",             pi: 'Ravi Ashwath, MD',                    logo: 'image50.png', headshot: 'image51.jpg' },
+      { state: 'Maryland',               name: "Johns Hopkins Hospital, Charlotte R. Bloomberg Children's Center", pi: 'Ashish Doshi, MD, PhD',             logo: 'image15.png', headshot: 'image17.png' },
+      { state: 'Florida',                name: 'Joe DiMaggio Children’s Hospital',                                pi: 'Jared Klein, MD',                     logo: 'image19.png', headshot: 'image21.png' },
+      { state: 'Kentucky',               name: 'Kentucky Children Hospital, University of Kentucky',              pi: 'Preeti Ramachandran, MD',             logo: 'image23.png', headshot: 'image25.png' },
+      { state: 'California',             name: 'Lucile Packard Children’s Hospital Stanford',                     pi: 'Shiraz Maskatia, MD',                 logo: 'image28.png', headshot: 'image29.png' },
+      { state: 'Michigan',               name: "Children's Hospital of Michigan",                                 pi: 'Jocelyn Ang, MD',                     logo: 'image30.png', headshot: 'image1.jpg' },
+      { state: 'Michigan',               name: "C.S Mott Children's Hospital, Michigan Medicine",                 pi: 'Adam Dorfman, MD',                    logo: 'image3.png',  headshot: 'image4.png' },
+      { state: 'Florida',                name: 'Nicklaus Children’s Hospital, Miami Fl',                          pi: 'Juan Muniz, MD',                      logo: 'image5.png',  headshot: 'image6.jpg' },
+      { state: 'Delaware',               name: "Nemours Children's Hospital",                                     pi: 'Deepika Thacker, MD',                 logo: 'image7.jpg',  headshot: 'image8.jpg' },
+      { state: 'Georgia',                name: 'Northside Hospital Heart Institute',                              pi: 'Parham Eshtehardi, MD',               logo: 'image9.jpg',  headshot: 'image10.jpg' },
+      { state: 'New York',               name: 'NYU Langone Health Children’s Hospital',                          pi: 'Puneet Bhatla, MD',                   logo: 'image58.png', headshot: 'image61.jpg' },
+      { state: 'Oregon',                 name: "OHSU Doernbecher Children's Hospital",                            pi: 'Lars Grosse-Wortmann, MD',            logo: 'image62.png', headshot: 'image24.png' },
+      { state: 'Oklahoma',               name: 'University of Oklahoma Health Sciences Children’s Hospital',      pi: 'Aswathy House, MD',                   logo: 'image66.png', headshot: 'image68.png' },
+      { state: 'Indiana',                name: 'Riley Hospital for Children',                                     pi: 'Jyoti Kandlikar Patel, MD',           logo: 'image71.png', headshot: 'image73.jpg' },
+      { state: 'New York',               name: 'University of Rochester Medical Center Children’s Hospital',      pi: 'Jason Mandell, MD, MS',               logo: 'image75.png', headshot: 'image77.jpg' },
+      { state: 'Washington',             name: "Seattle Children's Hospital",                                     pi: 'Brian Soriano, MD',                   logo: 'image57.png', headshot: 'image33.png' },
+      { state: 'Texas',                  name: "Children's Health Institute, University of Texas Health Science Center Houston", pi: 'Santosh Uppu, MD',  logo: 'image34.jpg', headshot: 'image35.png' },
+      { state: 'California',             name: 'UC Davis Children’s Hospital',                                    pi: 'Lakshmi Nagaraju, MD',                logo: 'image37.png', headshot: 'image39.png' },
+      { state: 'Mississippi',            name: 'University of Mississippi Medical Center Children’s Hospital',    pi: 'Jyothsna Venkata, MD',                logo: 'image43.jpg', headshot: 'image45.jpg' },
+      { state: 'Texas',                  name: 'UT Southwestern Medical Center Children’s Hospital',              pi: 'Hoang Nguyen, MD',                    logo: 'image47.png', headshot: 'image31.jpg' },
+      { state: 'Tennessee',              name: 'Vanderbilt Children’s Hospital',                                  pi: 'Jonathan Soslow, MD, MSCI',           logo: 'image32.jpg', headshot: 'image13.png' },
+      { state: 'New York',               name: 'Westchester Medical Center Maria Fareri Children’s Hospital',     pi: 'Supriya Jain, MD',                    logo: 'image14.png', headshot: 'image16.png' },
+      { state: 'Connecticut',            name: 'Yale New Haven Children’s Hospital',                              pi: 'Jeremy Steele, MD',                   logo: 'image18.png', headshot: 'image20.jpg' },
     ],
     []
   );
@@ -115,7 +143,7 @@ export default function ResearchSites() {
                           <img
                             src={getAsset(site.headshot)}
                             alt={`${site.pi} headshot`}
-                            style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', border: '1px solid #e6f0f3' }}
+                            style={{ width: '75px', height: '75px', borderRadius: '50%', objectFit: 'cover', border: '1px solid #e6f0f3' }}
                           />
                           <div style={{ color: '#374151', fontSize: '16px' }}>{site.pi}</div>
                         </div>

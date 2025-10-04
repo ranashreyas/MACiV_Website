@@ -46,7 +46,7 @@ export default function ForPatients() {
         {/* Band: Myocarditis */}
         <div style={{ background: 'linear-gradient(180deg, rgb(217,238,251) 0%, rgba(255,255,255,0) 100%)', padding: '40px 0', margin: '0 calc(50% - 50vw)' }}>
           <section style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <h2 style={{ color: '#067e8c', margin: '0 0 12px 0', fontWeight: 800, fontSize: '34px', lineHeight: 1.2 }}>Myocarditis</h2>
+            <h2 style={{ color: '#067e8c', margin: '0 0 12px 0', fontWeight: 800, fontSize: '34px', lineHeight: 1.2 }}>What is Myocarditis?</h2>
             <div style={{ display: 'grid', gridTemplateColumns: '60% 40%', gap: '24px', alignItems: 'center' }}>
               <div style={{ background: '#ffffff', borderRadius: '24px', padding: '24px' }}>
                 <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '17px', fontWeight: 600 }}>

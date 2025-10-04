@@ -40,21 +40,24 @@ export default function Home() {
           <div style={{ flex: '1 1 520px', minWidth: '300px' }}>
             <h1 style={{
               color: '#067e8c',
-              fontSize: '42px',
+              fontSize: '115px',
               lineHeight: 1.15,
               margin: '0 0 14px 0',
-              fontWeight: 800
+              fontWeight: 800,
+              fontStyle: 'italic'
             }}>
-              COVID-19 Vaccination-Associated Myocarditis (MACiV – Myocarditis After COViD Vaccination)
+              Myocarditis
             </h1>
             <p style={{
               color: '#234a52',
-              fontSize: '18px',
+              fontSize: '27px',
               lineHeight: 1.5,
               margin: 0,
               fontWeight: 500
             }}>
-              A Longitudinal, Multi-Institutional Study of Cardiac Manifestations and Long-Term Outcomes in Adolescents with COVID-19 vaccine-associated myocarditis in the U.S.
+              Dedicated to the advancement and treatment of myocarditis with continued research
+
+              {/* A Longitudinal, Multi-Institutional Study of Cardiac Manifestations and Long-Term Outcomes in Adolescents with COVID-19 vaccine-associated myocarditis in the U.S. */}
             </p>
           </div>
 
@@ -64,22 +67,22 @@ export default function Home() {
             width: '320px',
             height: '320px',
             borderRadius: '50%',
-            background: 'linear-gradient(145deg, rgba(16,156,170,0.9), rgba(78,205,215,0.7))',
+            background: '#ffffff',
             padding: '12px',
-            boxShadow: '0 12px 28px rgba(0,0,0,0.15)'
+            // boxShadow: '0 12px 28px rgba(0,0,0,0.15)'
           }}>
             <div style={{
               width: '100%',
               height: '100%',
               borderRadius: '50%',
               overflow: 'hidden',
-              backgroundColor: '#e9f6f8',
+              // backgroundColor: '#e9f6f8',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
             }}>
               <img
-                src={require('../assets/blank_profile.png')}
+                src={require('../assets/heroTitleImage.png')}
                 alt="MACiV illustrative"
                 style={{ width: '92%', height: '92%', objectFit: 'cover', borderRadius: '50%' }}
               />
@@ -100,11 +103,13 @@ export default function Home() {
         }}>
           <div style={{ display: 'flex' }}>
             {[
-              { id: 'overview', label: 'STUDY OVERVIEW' },
-              { id: 'purpose', label: 'STUDY PURPOSE' },
-              { id: 'objectives', label: 'STUDY OBJECTIVES' },
+              { id: 'overview', label: 'Myocarditis' },
+              { id: 'study', label: 'MACiV Study' },
+              // { id: 'overview', label: 'STUDY OVERVIEW' },
+              // { id: 'purpose', label: 'STUDY PURPOSE' },
+              // { id: 'objectives', label: 'STUDY OBJECTIVES' },
               { id: 'team', label: 'MACiV TEAM' },
-              { id: 'research', label: 'LINKS TO PUBLISHED RESEARCH' }
+              { id: 'research', label: 'LINKS' }
             ].map((item, idx) => (
               <button
                 key={item.id}
@@ -141,7 +146,7 @@ export default function Home() {
           
           {/* Overview */}
           <section id="overview" style={{
-            maxWidth: '1200px', margin: '0 auto'
+            maxWidth: '1300px', margin: '0 auto'
           }}>
             <h2 style={{
               maxWidth: '1200px',
@@ -151,12 +156,12 @@ export default function Home() {
               fontWeight: 800,
               lineHeight: 1.2
             }}>
-              Study Overview
+              What is Myocarditis?
             </h2>
 
             <div style={{
               display: 'grid',
-              gridTemplateColumns: '1.5fr 1fr',
+              gridTemplateColumns: '1.2fr 1fr',
               gap: '24px',
               alignItems: 'stretch'
             }}>
@@ -168,22 +173,103 @@ export default function Home() {
                 padding: '24px'
               }}>
                 <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '17px', fontWeight: 600 }}>
-                  COVID-19 mRNA vaccination has been associated with rare cases of acute myocarditis in adolescents and young adults, as documented in CDC surveillance data and published research studies. The COVID-19 Vaccination-Associated Myocarditis (MACiV) study is a multi-center research consortium focused on evaluating the association between acute myocarditis and COVID-19 mRNA vaccination in the adolescent and young adult population. This study seeks to better define the clinical course, cardiac complications, and mid- to long-term outcomes in patients aged 30 years with COVID-19 vaccine-associated myocarditis (C-VAM). The study also includes a comparative cohort of patients with COVID-19 or multisystem inflammatory syndrome in children (MIS-C) who underwent cardiac MRI to evaluate for myocarditis. The C-VAM cohort is then followed up at 2-, 5-, and 10-year intervals to monitor any persisting or detect new symptoms or cardiac disease. By leveraging standardized data collection across leading pediatric cardiology institutions, MACiV seeks to close critical evidence gaps to better inform clinical practice guidelines and long-term patient care. This research is supported by the U.S. Food and Drug Administration (FDA).
+                Myocarditis is an inflammatory disease of the myocardium that can result in impaired systolic function, arrhythmias, and in severe presentations, acute or chronic heart failure. Etiologies are diverse and include viral pathogens (e.g., coxsackievirus, adenovirus, SARS-CoV-2), autoimmune disorders, hypersensitivity reactions to medications, and less commonly, post-vaccination immune-mediated responses. Since the introduction of mRNA vaccines during the COVID-19 pandemic, vaccine-associated myocarditis—particularly in adolescent and young adult males—has emerged as a topic of significant clinical and scientific interest. Although the majority of post-vaccination cases are mild and self-limited with appropriate and timely intervention, the potential for persistent myocardial injury, as evidenced by late gadolinium enhancement on cardiac magnetic resonance imaging in some patients, underscores the importance of ongoing surveillance and clinical investigation.
                 </p>
               </div>
 
               {/* Image + caption box */}
               <div style={{
                 background: '#ffffff',
-                border: '1px solid #067e8c',
+                // border: '1px solid #067e8c',
                 borderRadius: '24px',
                 padding: '16px',
                 display: 'flex',
                 flexDirection: 'column',
-                marginTop: '15%',
                 alignItems: 'center',
                 justifyContent: 'center',
-                height: '70%'
+                height: 'auto'
+              }}>
+                <img
+                  src={require('../assets/myocarditisDiagram.png')}
+                  alt="Fig. 1 Key illustration: Initial presentation, myocardial injury and outcomes, in young patients with COVID-19 vaccine associated myocarditis."
+                  style={{ maxWidth: '100%', height: 'auto', display: 'block', borderRadius: '0px' }}
+                />
+                {/* <p style={{ color: '#6b7a8c', fontSize: '13px', margin: '8px 0 0 0', textAlign: 'center' }}>
+                  <i>Fig. 1 Key illustration: Initial presentation, myocardial injury and outcomes, in young patients with COVID-19 vaccine associated myocarditis.</i>
+                </p> */}
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* Band: study */}
+        <div style={{ background: 'linear-gradient(180deg,rgb(210, 237, 242) 0%, rgba(255,255,255,0) 100%)', padding: '40px 0', margin: '0 calc(50% - 50vw)' }}>
+          {/* Study title outside the card */}
+          
+          {/* study */}
+          <section id="study" style={{
+            maxWidth: '1200px', margin: '0 auto'
+          }}>
+            <div style={{ textAlign: 'center' }}>
+              <img
+                src={require('../assets/MACiV_logo_transparent.png')}
+                alt="MACiV logo"
+                style={{ display: 'inline-block', maxWidth: '550px', width: '100%', height: 'auto', margin: '30px auto 10px auto' }}
+              />
+              <p style={{
+                color: '#1f2d3d',
+                fontSize: '27px',
+                lineHeight: 1.5,
+                margin: '6px auto 0',
+                // fontStyle: 'italic',
+                fontWeight: 600,
+                maxWidth: '800px'
+              }}>
+                COVID-19 Vaccination-Associated Myocarditis (MACiV – <b>M</b>yocarditis <b>A</b>fter <b>C</b>OV<b>i</b>D <b>V</b>accination)
+              </p>
+              <p style={{
+                color: '#1f2d3d',
+                fontSize: '20px',
+                lineHeight: 1.5,
+                margin: '15px auto 30px',
+                fontStyle: 'italic',
+                fontWeight: 500,
+                maxWidth: '1100px'
+              }}>
+                A Longitudinal, Multi-Institutional Study of Cardiac Manifestations and Long-Term Outcomes in Adolescents with COVID-19 vaccine-associated myocarditis in the U.S. 
+              </p>
+            </div>
+
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '24px'
+            }}>
+
+              {/* Blurb box */}
+              <div style={{
+                background: '#ffffff',
+                border: '1px solid #067e8c',
+                borderRadius: '24px',
+                padding: '24px'
+              }}>
+                <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '20px', fontWeight: 600 }}>
+                COVID-19 mRNA vaccination has been associated with rare cases of acute myocarditis in adolescents and young adults, as documented in CDC surveillance data and published research studies. The COVID-19 Vaccination-Associated Myocarditis (MACiV) study is a multi-center research consortium focused on evaluating the association between acute myocarditis and COVID-19 mRNA vaccination in the adolescent and young adult population. This study seeks to better define the clinical course, cardiac complications, and mid- to long-term outcomes in patients aged ≤30 years with COVID-19 vaccine-associated myocarditis (C-VAM). The study also includes a comparative cohort of patients with COVID-19 or multisystem inflammatory syndrome in children (MIS-C) who underwent cardiac MRI to evaluate for myocarditis. The C-VAM cohort is then followed up at 2-, 5-, and 10-year intervals to monitor any persisting or detect new symptoms or cardiac disease. By leveraging standardized data collection across leading pediatric cardiology institutions, MACiV seeks to close critical evidence gaps to better inform clinical practice guidelines and long-term patient care. This research is supported by the U.S. Food and Drug Administration (FDA).
+                </p>
+              </div>
+
+
+              {/* Image + caption box */}
+              <div style={{
+                background: '#ffffff',
+                // border: '1px solid #067e8c',
+                borderRadius: '24px',
+                padding: '16px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: 'auto'
               }}>
                 <img
                   src={require('../assets/StudyOverviewFig1.png')}
@@ -194,6 +280,11 @@ export default function Home() {
                   <i>Fig. 1 Key illustration: Initial presentation, myocardial injury and outcomes, in young patients with COVID-19 vaccine associated myocarditis.</i>
                 </p>
               </div>
+
+
+              
+
+              
             </div>
           </section>
         </div>
@@ -302,7 +393,7 @@ export default function Home() {
                 { name: 'Dr. Supriya Jain, MD', title: 'Lead Investigator', headshot: '../assets/SupriyaJain.png'},
                 { name: 'Dr. Lars Grosse-Wortmann, MD', title: 'Lead Investigator', headshot: '../assets/LarsGrosseWortmann.png'},
                 { name: 'Dr. Victoria Maksymiuk, MD, MS', title: 'Study Coordinator', headshot: '../assets/VictoriaMaksymiuk.jpg'},
-                { name: 'Joshua Garelick', title: 'Study Administrator', headshot: '../assets/JoshuaGarelick.jpg'},
+                { name: 'Joshua Garelik', title: 'Study Administrator', headshot: '../assets/JoshuaGarelick.jpg'},
                 { name: 'Joel Johnson', title: 'Data Manager', headshot: '../assets/blank_profile.png'},
                 { name: 'Shreyas Rana', title: 'Website Developer', headshot: '../assets/ShreyasRana.jpg'}
               ].map((m, i) => {
@@ -322,7 +413,7 @@ export default function Home() {
                     <img
                       src={src}
                       alt={m.name}
-                      style={{ width: '96px', height: '96px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #e9ecef' }}
+                      style={{ width: '115px', height: '115px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #e9ecef' }}
                     />
                     <div style={{ fontWeight: 700, color: '#2c3e6a', fontSize: '18px' }}>{m.name}</div>
                     <div style={{ color: '#576574', fontSize: '14px', fontWeight: 600 }}>{m.title}</div>
@@ -339,13 +430,34 @@ export default function Home() {
           <section id="research" style={{
             maxWidth: '1200px', margin: '0 auto'
           }}>
-            <h2 style={{ color: '#067e8c', margin: '0 0 10px 0', fontWeight: 800, fontSize: '36px', lineHeight: 1.2 }}>Links to Published Research</h2>
+            <h2 style={{ color: '#067e8c', margin: '0 0 10px 0', fontWeight: 800, fontSize: '36px', lineHeight: 1.2 }}>Links</h2>
             <div style={{
               background: '#ffffff',
               border: '1px solid #067e8c',
               borderRadius: '24px',
               padding: '24px'
             }}>
+              {/* MACiV in the Media subbox */}
+              <div style={{
+                background: '#f9fcfd',
+                border: '1px solid #bfe5ea',
+                borderRadius: '16px',
+                padding: '16px',
+                marginBottom: '16px'
+              }}>
+                <div style={{ color: '#067e8c', fontWeight: 800, fontSize: '18px', marginBottom: '8px', letterSpacing: '0.3px' }}>
+                  MACiV in the Media
+                </div>
+                <a
+                  href="https://cardiovascularbusiness.com/topics/healthcare-management/healthcare-policy/fda-wants-new-heart-damage-warnings-added-covid-19-vaccines"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: '#1b7c85', textDecoration: 'underline', fontWeight: 700 }}
+                >
+                  FDA wants new heart-damage warnings added to COVID-19 vaccines
+                </a>
+              </div>
+
               {/* Badge */}
               <div style={{
                 display: 'inline-block',
@@ -368,7 +480,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div style={{ borderLeft: '6px solid #067e8c', paddingLeft: '16px', marginTop: '16px' }}>
+              {/* <div style={{ borderLeft: '6px solid #067e8c', paddingLeft: '16px', marginTop: '16px' }}>
                 <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '16px', fontWeight: 600}}>
                   Banka P, Robinson JD, Uppu SC, Harris MA, Hasbani K, Lai WW, Richmond ME, Fratz S, Jain S, Johnson TR, Maskatia SA, Lu JC, Samyn MM, Patton D, Powell AJ. Cardiovascular magnetic resonance techniques and findings in children with myocarditis: a multicenter retrospective study. J Cardiovasc Magn Reson. 2015 Nov 17;17:96. doi: 10.1186/s12968-015-0201-6. PMID: 26576638; PMCID: PMC4650339.
                 </p>
@@ -396,7 +508,7 @@ export default function Home() {
                 <p style={{ color: '#576574', lineHeight: 1.8, margin: 0, fontSize: '16px', fontWeight: 600}}>
                   Lin J, Harahsheh AS, Raghuveer G, Jain S, Choueiter NF, Garrido-Garcia LM, Dahdah N, Portman MA, Misra N, Khoury M, Fabi M, Elias MD, Dionne A, Lee S, Tierney ESS, Ballweg JA, Manlhiot C, McCrindle BW. Emerging Insights Into the Pathophysiology of Multisystem Inflammatory Syndrome Associated With COVID-19 in Children. Can J Cardiol. 2023 Jun;39(6):793-802. doi: 10.1016/j.cjca.2023.01.002. Epub 2023 Jan 7. PMID: 36626979; PMCID: PMC9824951.
                 </p>
-              </div>
+              </div> */}
 
               {/* Actions */}
               {/* <div style={{ marginTop: '14px' }}>
