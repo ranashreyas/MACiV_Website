@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MACiV_Website/static/css/main.3c40097a.css",
-    "main.js": "/MACiV_Website/static/js/main.7e2c4d7c.js",
+    "main.js": "/MACiV_Website/static/js/main.83a35649.js",
     "static/js/453.a67e8b7e.chunk.js": "/MACiV_Website/static/js/453.a67e8b7e.chunk.js",
     "static/media/whatIsThisStudyDoing.png": "/MACiV_Website/static/media/whatIsThisStudyDoing.d5ba272f7c4d0f307f3a.png",
     "static/media/whyParticipate.png": "/MACiV_Website/static/media/whyParticipate.7b321f12c764d2bde042.png",
@@ -56,11 +56,11 @@
     "static/media/image23.png": "/MACiV_Website/static/media/image23.9e7214d1b67a90cde789.png",
     "index.html": "/MACiV_Website/index.html",
     "main.3c40097a.css.map": "/MACiV_Website/static/css/main.3c40097a.css.map",
-    "main.7e2c4d7c.js.map": "/MACiV_Website/static/js/main.7e2c4d7c.js.map",
+    "main.83a35649.js.map": "/MACiV_Website/static/js/main.83a35649.js.map",
     "453.a67e8b7e.chunk.js.map": "/MACiV_Website/static/js/453.a67e8b7e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c40097a.css",
-    "static/js/main.7e2c4d7c.js"
+    "static/js/main.83a35649.js"
   ]
 }
