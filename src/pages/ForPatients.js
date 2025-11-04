@@ -95,6 +95,26 @@ export default function ForPatients() {
                 <p style={{ color: '#576574', lineHeight: 1.8, margin: '16px 0 0 0', fontSize: '17px', fontWeight: 600 }}>
                   Most kids and teens who get myocarditis get better, but doctors still have a lot to learn about what causes it and how to treat it best. That’s why this study is important.
                 </p>
+                <div style={{ marginTop: '18px', textAlign: 'center' }}>
+                  <a
+                    href="mailto:victoria.maksymiuk@wmchealth.org"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      display: 'inline-block',
+                      backgroundColor: '#067e8c',
+                      color: 'white',
+                      textDecoration: 'none',
+                      padding: '12px 20px',
+                      borderRadius: '10px',
+                      fontWeight: 800,
+                      letterSpacing: '0.4px',
+                      fontSize: '18px'
+                    }}
+                  >
+                    Enroll Now!
+                  </a>
+                </div>
               </div>
             </div>
           </section>
